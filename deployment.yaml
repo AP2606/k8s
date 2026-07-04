@@ -5,16 +5,16 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchlabels:
+    matchLabels:
       app: my-nginx
   template:
     metadata:
       labels:
         app: my-nginx
-  spec:
-    containers:
-    - name: my-nginx
-      image: ap2606/my-nginx:v2
-      imagePullPolicy: Always
-      ports:
-      - containerPort: 80
+    spec:
+      containers:
+        - name: my-nginx
+          image: ap2606/my-nginx:v2
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
